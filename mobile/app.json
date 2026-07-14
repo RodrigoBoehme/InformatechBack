@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "InformaTech",
+    "slug": "InformaTech",
+    "version": "1.0.0",
+    "scheme": "InformaTech",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "plugins": ["expo-router", "expo-secure-store", "expo-location"]
+  }
+}
