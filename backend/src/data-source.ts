@@ -11,7 +11,7 @@ export const AppDataSource = new DataSource({
   username: env.dbUser,
   password: env.dbPassword,
   database: env.dbName,
-  synchronize: true,
+  synchronize: false,
   logging: false,
   entities: [User, RescueRequest]
 })

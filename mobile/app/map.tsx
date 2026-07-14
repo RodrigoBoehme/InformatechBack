@@ -318,7 +318,7 @@ export default function MapScreen() {
         <Text style={{ fontSize: 16, fontWeight: '700' }}>
           Criar zona de risco
         </Text>
-
+        
         <View style={{ flexDirection: 'row', gap: 8, flexWrap: 'wrap' }}>
           {(['BAIXA', 'MEDIA', 'ALTA', 'CRITICA'] as RiskLevel[]).map(risk => (
             <Pressable
