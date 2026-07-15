@@ -48,7 +48,7 @@ export default function Home() {
         <Button title="Mapa" onPress={() => router.push('/map')} style={{ flex: 1 }} />
         <Button title="Novo pedido" onPress={() => router.push('/new-request')} style={{ flex: 1 }} />
       </View>
-      <Button title="Sair" variant="outline" onPress={()=>{ router.back()}} />
+      <Button title="Sair" variant="outline" onPress={()=>{ signOut; router.replace("/login")}} />
       <Text style={{ marginTop: 18, marginBottom: 8, fontSize: 18, fontWeight: '800' }}>Pedidos recentes</Text>
       <FlatList
         data={requests}
