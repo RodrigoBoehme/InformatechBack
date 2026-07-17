@@ -33,7 +33,8 @@ export default function Register() {
     phone: '',
     password: '',
     confirmPassword: '',
-    role: 'REQUESTER'
+    role: 'REQUESTER',
+    acceptedTerms: false, // Estado do checkbox de termos
   })
 
   const [loading, setLoading] = useState(false)
@@ -87,6 +88,15 @@ export default function Register() {
       Alert.alert(
         'Senhas diferentes',
         'A senha e a confirmação de senha precisam ser iguais.'
+      )
+      return
+    }
+
+    // Validação do Checkbox
+    if (!form.acceptedTerms) {
+      Alert.alert(
+        'Termos obrigatórios',
+        'Você precisa aceitar os termos de uso e política de privacidade para continuar.'
       )
       return
     }
@@ -261,6 +271,59 @@ export default function Register() {
           )
         })}
       </View>
+
+      {/* Checkbox de Termos de Uso */}
+      <Pressable
+        onPress={() =>
+          setForm(previousForm => ({
+            ...previousForm,
+            acceptedTerms: !previousForm.acceptedTerms
+          }))
+        }
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          gap: 10,
+          marginTop: 6,
+          marginBottom: 10,
+          paddingVertical: 4
+        }}
+      >
+        <View
+          style={{
+            width: 20,
+            height: 20,
+            borderRadius: 6,
+            borderWidth: 2,
+            borderColor: form.acceptedTerms ? colors.primary : colors.border,
+            backgroundColor: form.acceptedTerms ? colors.primary : 'transparent',
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}
+        >
+          {form.acceptedTerms && (
+            <Text
+              style={{
+                color: '#fff',
+                fontSize: 12,
+                fontWeight: '900'
+              }}
+            >
+              ✓
+            </Text>
+          )}
+        </View>
+
+        <Text
+          style={{
+            fontSize: 14,
+            color:  '#fff',
+            flexShrink: 1
+          }}
+        >
+          Aceito os Termos de Uso e Política de Privacidade
+        </Text>
+      </Pressable>
 
       <Button
         title="Cadastrar"

@@ -1,1 +1,1 @@
-CREATE DATABASE IF NOT EXISTS InformaTech_lite3 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS InformaTech_lite CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
