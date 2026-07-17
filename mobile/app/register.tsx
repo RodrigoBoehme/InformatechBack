@@ -321,7 +321,7 @@ export default function Register() {
             flexShrink: 1
           }}
         >
-          Aceito os Termos de Uso e Política de Privacidade
+          Aceito os <Pressable onPress={()=>{router.push("/termos")}}><Text style={{color:"#fff",fontSize:12,flexShrink:1}}>Termos de Uso</Text></Pressable> e Política de Privacidade
         </Text>
       </Pressable>
 
