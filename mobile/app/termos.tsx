@@ -16,8 +16,8 @@ export default function termos(){
             <View style={[styles.glowBottom, { bottom: -height * 0.4, left: -width * 0.8, width: width * 1.4, height: width * 1.2, borderRadius: (width * 1) / 2 }]} />
             <View style={[styles.glowBottom, { top: -height * 0.4, left: -width * 0.9, width: width * 1.44, height: width * 1.1, borderRadius: (width * 1) / 2 }]} />
             <ScrollView>
-            <Text style={{color:"#fff",fontSize:20,marginTop:10,marginLeft:10}}>Termos de uso</Text>
-            <Text style={{color:"#fff"}}>Este documento estabelece os Termos de Uso da plataforma digital InformaTech, desenvolvida com o objetivo de mapear áreas de risco de alagamento no município de São Leopoldo, identificar locais seguros e disponibilizar informações que auxiliem a população e os órgãos competentes em situações de emergência e calamidade pública.
+            <Text style={{color:"#fff",fontSize:20,marginTop:20,marginLeft:10}}>Termos de uso</Text>
+            <Text style={{color:"#fff", textAlign:"justify",marginBottom:15,marginTop:10,fontSize:9}}>Este documento estabelece os Termos de Uso da plataforma digital InformaTech, desenvolvida com o objetivo de mapear áreas de risco de alagamento no município de São Leopoldo, identificar locais seguros e disponibilizar informações que auxiliem a população e os órgãos competentes em situações de emergência e calamidade pública.
 Ao acessar, instalar ou utilizar a plataforma, o usuário declara que leu, compreendeu e concorda com todas as condições estabelecidas neste documento, comprometendo-se a utilizá-la de forma responsável e em conformidade com estes Termos de Uso.
 A InformaTech disponibiliza informações baseadas no histórico de enchentes registradas no município, com destaque para os eventos ocorridos desde 1965 e para a enchente de 2024. O aplicativo oferece recursos como mapa interativo das áreas de risco, identificação de locais seguros, indicação de rotas de fuga, visualização de áreas de escape, informações sobre os níveis de alagamento e orientações de prevenção e segurança.
 As informações apresentadas têm caráter informativo e de apoio à tomada de decisões. A plataforma não substitui os serviços prestados por órgãos oficiais, como Defesa Civil, Corpo de Bombeiros, SAMU ou demais autoridades públicas, nem garante a inexistência de riscos nas rotas ou locais indicados. Em situações de emergência, o usuário deverá sempre seguir as orientações das autoridades competentes.
@@ -29,7 +29,7 @@ A InformaTech poderá atualizar ou modificar estes Termos de Uso a qualquer mome
 Este Termo de Uso é regido pelas leis da República Federativa do Brasil. Fica eleito o foro da comarca de São Leopoldo/RS, com exclusão de qualquer outro, por mais privilegiado que seja, para dirimir eventuais controvérsias decorrentes da utilização da plataforma.
 </Text>
 
-            <Pressable onPress={()=>{router.back()}} style={{margin:20,backgroundColor:colors.primary,alignItems:'center',padding:4,borderRadius:15} }>
+            <Pressable onPress={()=>{router.back()}} style={{margin:20,marginBottom:30,backgroundColor:colors.primary,alignItems:'center',padding:4,borderRadius:15} }>
                 <Text style={{color:"#fff"}}>Voltar</Text>
             </Pressable>
             </ScrollView>
