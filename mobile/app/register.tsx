@@ -34,7 +34,10 @@ export default function Register() {
     password: '',
     confirmPassword: '',
     role: 'REQUESTER',
-    acceptedTerms: false, // Estado do checkbox de termos
+ // Estado do checkbox de termos
+  })
+  const [termos,setTermos]=useState({
+        acceptedTerms: false,
   })
 
   const [loading, setLoading] = useState(false)
@@ -93,7 +96,7 @@ export default function Register() {
     }
 
     // Validação do Checkbox
-    if (!form.acceptedTerms) {
+    if (!termos.acceptedTerms) {
       Alert.alert(
         'Termos obrigatórios',
         'Você precisa aceitar os termos de uso e política de privacidade para continuar.'
@@ -275,7 +278,7 @@ export default function Register() {
       {/* Checkbox de Termos de Uso */}
       <Pressable
         onPress={() =>
-          setForm(previousForm => ({
+          setTermos(previousForm => ({
             ...previousForm,
             acceptedTerms: !previousForm.acceptedTerms
           }))
@@ -295,13 +298,13 @@ export default function Register() {
             height: 20,
             borderRadius: 6,
             borderWidth: 2,
-            borderColor: form.acceptedTerms ? colors.primary : colors.border,
-            backgroundColor: form.acceptedTerms ? colors.primary : 'transparent',
+            borderColor: termos.acceptedTerms ? colors.primary : colors.border,
+            backgroundColor: termos.acceptedTerms ? colors.primary : 'transparent',
             justifyContent: 'center',
             alignItems: 'center'
           }}
         >
-          {form.acceptedTerms && (
+          {termos.acceptedTerms && (
             <Text
               style={{
                 color: '#fff',
